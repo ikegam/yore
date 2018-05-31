@@ -2,9 +2,7 @@ import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 import { Photo } from '../../src/gui/js/interfaces';
 
-jest.mock('google-map-react', () => ({
-  default: 'GoogleMapReact'
-}));
+jest.mock('google-map-react', () => 'GoogleMapReact');
 jest.mock('react-icons/lib/fa', () => ({
   FaMapMarker: 'FaMapMarker'
 }));
@@ -19,8 +17,7 @@ describe('MapArea', () => {
 
   test('renders a map centered at (0,0) if the photo has no location', () => {
     const photo: Photo = {
-      path: '',
-      src: ''
+      path: ''
     };
     const mapArea = renderer.create(<MapArea photo={photo} />).toJSON();
     expect(mapArea).toMatchSnapshot();
@@ -34,8 +31,7 @@ describe('MapArea', () => {
           longitude: 36.2
         }
       },
-      path: '',
-      src: ''
+      path: ''
     };
     const mapArea = renderer.create(<MapArea photo={photo} />).toJSON();
     expect(mapArea).toMatchSnapshot();

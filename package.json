@@ -16,11 +16,11 @@
     "@types/react-virtualized": "^9.7.12",
     "babel-polyfill": "^6.26.0",
     "google-map-react": "^1.0.0",
+    "pig.js": "https://github.com/WrinklyNinja/pig.js#update-state",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-icons": "^2.2.7",
-    "react-virtualized": "^9.17.3",
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
